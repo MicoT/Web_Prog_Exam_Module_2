@@ -1,0 +1,136 @@
+header{
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    width: 100%;
+    background-color: rgb(248, 37, 37);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: helvetica, arial, sans-serif;
+    background: rgb(243, 113, 113);
+    margin-top: 100px;
+    color: #ccc;
+    font-size: 16px;
+    padding: 10px;
+    
+}
+
+.nobutton:hover .yes {
+  animation: yay 0.7s ease-out;
+}
+.nobutton:hover .nope {
+  animation: nope 0.7s ease-out;
+}
+.card {
+  background: powderblue;
+  color: #000;
+}
+.list ul.cardlist {
+  padding-bottom: 20px;
+}
+
+.card {
+    box-shadow: 5px 10px rgb(196, 184, 184);
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    text-align:center;
+    width: 400px;
+    height: 600px;
+    background: #666;
+    
+}
+.cardcontainer {
+    position: absolute;
+    left: 730px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+}
+  
+ 
+.list .cardlist {
+    margin: 20px;
+    padding: 0;
+}
+.list .card {
+    display: none;
+}
+.list .current {
+    display: block;
+}
+  
+
+  
+.but-nope, .but-yay, .nopes, .yays {
+    display: none;
+}
+
+.but-nope, .but-yay,
+.nopes, .yays {
+    position: relative;
+    right: 40px;
+    line-height: 80px;
+    display: inline-block;
+    
+}
+  
+.cardcontainer button {
+    background: #0c0;
+    border-color: black;
+    color: #fff;
+    border-radius: 50% 50%;
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    line-height: 25px;
+    margin-left: 1.0em;
+    margin-right: 1.0em;
+    display: inline-block;
+}
+.cardcontainer button:focus {
+    outline: 0;
+    background: #0f0;
+}
+  
+.cardcontainer .but-nope {
+    background: #c00;
+}
+.cardcontainer .but-nope:focus {
+    outline: 0;
+    background: #f00;
+}
+  
+.cardcontainer.yes .card {
+    animation: yay 0.7s ease-out;
+}
+.cardcontainer.nope .card {
+    animation: nope 0.7s ease-out;
+}
+
+  
+@keyframes yay {
+    from {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: rotate(40deg) translateY(-80px);
+        opacity: 0;
+    }
+}
+  
+@keyframes nope {
+    from {
+        transform: rotate(0deg);
+      opacity: 1;
+    }
+    to {
+        transform: rotate(-40deg) translateY(-80px);
+        opacity: 0;
+    }
+}
+  
